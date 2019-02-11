@@ -1,0 +1,13 @@
+.Rhistory
+[0-9]*
+outputs
+manuscript
+*old
+*OLD
+*old*
+notes*
+*~*
+outputCompiled
+*html
+*docx
+test
