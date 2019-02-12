@@ -61,7 +61,7 @@ sppLabel <- sppStack %>%
 ncol <- 5
 nrow <- ceiling(nrow(sppLabel)/ncol)
 pWidth <- 10
-pHeight <- (nrow)*2
+pHeight <- (nrow)*1.75
 zLim <- c(0, ceiling(quantile(sppStack$biomass_tonsPerHa, 0.9999)/10)*10)
 ylim <- range(sppStack$y)
 xlim <- range(sppStack$x)
@@ -76,7 +76,7 @@ p <- ggplot(data = sppStack, aes(x = x, y = y)) +
     facet_wrap(~ species, ncol = ncol) +
     scale_fill_gradientn(name = "AGB (tonnes/ha)",
                          colours = c("grey", "darkblue", "darkgreen", "yellow",  "orange", "red"),
-                         values = c(0, 0.001, 0.20, 0.40, 0.60, 1), limits = zLim) +
+                         values = c(0, 0.001, 0.10, 0.25, 0.50, 1), limits = zLim) +
     geom_polygon(aes(x = long, y = lat, group = group), data = studyAreaF,
                  colour = 'white', fill = NA, size = 0.6) +
     geom_text(aes(x = max(xlim), y =  max(ylim),
@@ -95,9 +95,9 @@ png(filename = paste0("initialBiomass_", a, ".png"),
     width = pWidth, height = pHeight, units = "in", res = 300, pointsize = 10)
 
 
-print(p + labs(title = paste0("k-NN estimates of initial aboveground biomass in 2001\n",
+print(p + labs(title = paste0("MODIS-derived estimates of initial aboveground biomass in 2001\n",
                               simAreaName),
-               caption = "k-NN estimates of AGB are from Beaudoin et al. 2014.") +
+               caption = "Estimates of AGB are from Beaudoin et al. 2014.") +
           theme_dark() +
           theme(axis.title.x = element_blank(),
                 axis.title.y = element_blank(),

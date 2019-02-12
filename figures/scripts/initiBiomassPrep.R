@@ -10,7 +10,7 @@ rm(wwd)
 require(RCurl)
 require(raster)
 
-areas <- "MRCOuta"
+areas <- "MRCCentre"
 year <- 2001
 
 a <- areas[1]
