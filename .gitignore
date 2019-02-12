@@ -10,4 +10,4 @@ notes*
 outputCompiled
 *html
 test
-*.Rmd
+*Rmd
