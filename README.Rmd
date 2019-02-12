@@ -1,9 +1,13 @@
 ---
 title: "Setting up LANDIS-II as a simulation platform to assess the impact of firewood harvesting on carbon stocks in the temperate forest of Eastern Canada"
-author: "Frédérik Doyon, Yan Boulanger, Dominic Cyr, Marco Mina, Jean-François Sénécal. Repository maintained by Dominic Cyr"
-output: 
-  html_document: 
+author: "Frédérik Doyon, Yan Boulanger, Dominic Cyr, Marco Mina, Jean-François Sénécal.\nRepository maintained by Dominic Cyr"
+output:
+  html_document:
     keep_md: yes
+    theme: cosmo
+    toc: yes
+  pdf_document:
+    toc: yes
 ---
 
 Updated on `r format(Sys.time(), "%b %d %Y")`
