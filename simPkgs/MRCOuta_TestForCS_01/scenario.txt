@@ -2,17 +2,17 @@ LandisData  Scenario
 
 Duration  100
 
-Species   species_MRCOuta.txt
+Species   species.txt
 
-Ecoregions      ./landtypes_MRCOuta.txt
-EcoregionsMap   ./input_rasters/landtypes_MRCOuta.tif
+Ecoregions      ./landtypes.txt
+EcoregionsMap   ./input_rasters/landtypes.tif
 
 CellLength  250 << meters
 
 
 >> Succession Extension     Initialization File
 >> --------------------     -------------------
-    "ForC Succession"        ForC-succession-MRCOuta.txt
+    "ForC Succession"        ForC_succession.txt
 
 
 >> Disturbance Extensions   Initialization File

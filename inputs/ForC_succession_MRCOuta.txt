@@ -1,13 +1,13 @@
 LandisData  "ForC Succession"
 
-Timestep  5
+Timestep  1
 
 SeedingAlgorithm  WardSeedDispersal
 
-ClimateFile	"ClimateInput-MRCOuta.txt"
+ClimateFile	"ClimateInput_MRCOuta.txt"
 
-InitialCommunities      "./initial-communities_MRCOuta.dat"
-InitialCommunitiesMap   "./input_rasters/initial-communities_MRCOuta.tif"
+InitialCommunities      "./initial_communities_MRCOuta.dat"
+InitialCommunitiesMap   "./input_rasters/initial_communities_MRCOuta.tif"
 >> SnagFile	"Snag_example.txt"
 
 
@@ -16,7 +16,7 @@ ForCSOutput
 >> Output interval
 >>  Biomass     DOM_Pools   Fluxes	Summary
 >>  ----------------------------------------------------------------
- 	   5     	  5           5	      5
+ 	   1     	  1           10	      1
 
 	   
 SoilSpinUp
