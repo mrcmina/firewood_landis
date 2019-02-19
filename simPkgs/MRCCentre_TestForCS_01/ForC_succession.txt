@@ -4,10 +4,10 @@ Timestep  5
 
 SeedingAlgorithm  WardSeedDispersal
 
-ClimateFile	"ClimateInput_MRCCentre.txt"
+ClimateFile	"ClimateInput.txt"
 
-InitialCommunities      "./initial_communities_MRCCentre.dat"
-InitialCommunitiesMap   "./input_rasters/initial_communities_MRCCentre.tif"
+InitialCommunities      "./initial_communities.dat"
+InitialCommunitiesMap   "./input_rasters/initial_communities.tif"
 >> SnagFile	"Snag_example.txt"
 
 
@@ -23,7 +23,7 @@ SoilSpinUp
 >> On/Off  Tolerance     Max
 >>  Flag           %     Iterations
 >>  ----------------------------------------------------------------
- 	 1     	  1.0	     20	
+ 	 0     	  1.0	     20	
 
 	 
 AvailableLightBiomass  
