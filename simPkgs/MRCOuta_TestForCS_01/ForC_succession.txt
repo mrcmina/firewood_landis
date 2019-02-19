@@ -1,13 +1,15 @@
 LandisData  "ForC Succession"
 
+>>Landscape: MRC Outauais
+
 Timestep  5
 
 SeedingAlgorithm  WardSeedDispersal
 
-ClimateFile	"ClimateInput-MRCOuta.txt"
+ClimateFile	"ClimateInput.txt"
 
-InitialCommunities      "./initial-communities_MRCOuta.dat"
-InitialCommunitiesMap   "./input_rasters/initial-communities_MRCOuta.tif"
+InitialCommunities      ./initial_communities.dat
+InitialCommunitiesMap   ./input_rasters/initial_communities.tif
 >> SnagFile	"Snag_example.txt"
 
 
@@ -16,7 +18,7 @@ ForCSOutput
 >> Output interval
 >>  Biomass     DOM_Pools   Fluxes	Summary
 >>  ----------------------------------------------------------------
- 	   5     	  5           5	      5
+ 	   5     	  5           10	      5
 
 	   
 SoilSpinUp
@@ -3504,7 +3506,7 @@ EcoSppDOMParameters
 
 
 >>All these values are the same for all species and do not vary among ecoregions
->>Initial DOM and Soil pools set to 0 because first we'll derive them with soil spinup. Afterwards they should be replaced. 
+>>Initial DOM and Soil pools derived with ForCS soil spinup.
 >>Replaced DecayRate for Pool10 from 0.0000 to 0.0001 (should not be 0 otherwise Warning) #MM20190213
 
 

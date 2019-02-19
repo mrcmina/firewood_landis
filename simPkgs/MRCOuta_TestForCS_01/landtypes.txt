@@ -1,5 +1,7 @@
 LandisData Ecoregions
 
+>> Landtypes for landscape MRC Outauais. Project firewood_landis
+
 >>         Map
 >> Active  Code  Name   Description
 >> ------  ----  -----  -----------
