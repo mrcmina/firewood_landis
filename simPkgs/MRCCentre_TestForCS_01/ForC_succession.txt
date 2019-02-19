@@ -1,5 +1,7 @@
 LandisData  "ForC Succession"
 
+>>Landscape: MRC Centre
+
 Timestep  5
 
 SeedingAlgorithm  WardSeedDispersal

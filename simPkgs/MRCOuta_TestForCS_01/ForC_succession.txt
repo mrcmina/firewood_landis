@@ -1,6 +1,6 @@
 LandisData  "ForC Succession"
 
->>Landscape: MRC Outauais.
+>>Landscape: MRC Outauais
 
 Timestep  5
 
