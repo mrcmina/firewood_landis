@@ -1,0 +1,6 @@
+LandisData "ForC Succession"
+
+SnagData
+>>Species   AgeAtDeath  TimeSinceDeath Cause
+querelli 	53                       5		other
+pinubank        88                      12		bda
