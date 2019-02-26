@@ -1,0 +1,32 @@
+LandisData   "Initial Communities"
+
+>>new jackpine 
+MapCode  0
+   pinubank 1
+
+>> young oak
+MapCode  1
+   querelli  30 
+
+>> young jackpine     
+MapCode 2
+  pinubank 30
+
+>> middle  oak 
+MapCode 3
+querelli 90
+ 
+>> middle oak
+MapCode 4
+   querelli 190
+   
+>> middle jackpine 
+MapCode 5
+   pinubank 90
+      
+>> new oak 
+MapCode 6
+   querelli 1
+   pinubank 88
+  
+ 
