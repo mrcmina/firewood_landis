@@ -1,6 +1,6 @@
 LandisData  Scenario
 
-Duration  5
+Duration  50
 
 Species   species.txt
 
@@ -17,13 +17,13 @@ CellLength  250 << meters
 
 >> Disturbance Extensions   Initialization File
 >> ----------------------   -------------------
->>   "Dynamic Fuel System"    	fuels-DFFS.txt
->>   "Dynamic Fire System"  	fire-DFFS.txt
+>>     "Biomass Harvest"	        biomass_harvest_Test_01.txt
 >>   "Base Harvest"	        	baseHarvestv1.txt
->>   "Biomass Harvest"	        biomassHarvest.txt
 >>   "Base Fire"		    	base-fire_v2.txt
 >>   "Base Wind"		    	base-wind.txt
 >>   "Base BDA"		    		BDA-input.txt
+>>   "Dynamic Fuel System"    	fuels-DFFS.txt
+>>   "Dynamic Fire System"  	fire-DFFS.txt
 >> DisturbancesRandomOrder  no  << optional parameter; default = no
 
 
