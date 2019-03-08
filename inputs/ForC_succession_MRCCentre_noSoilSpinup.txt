@@ -1,8 +1,6 @@
 LandisData  "ForC Succession"
 
->>Landscape: MRC Centre
-
-Timestep  5
+Timestep  10
 
 SeedingAlgorithm  WardSeedDispersal
 
@@ -18,7 +16,7 @@ ForCSOutput
 >> Output interval
 >>  Biomass     DOM_Pools   Fluxes	Summary
 >>  ----------------------------------------------------------------
- 	   5     	  5         5	      5
+ 	   10     	  10         10	      10
 
 	   
 SoilSpinUp
