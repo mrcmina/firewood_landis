@@ -1,0 +1,265 @@
+﻿LandisData  "Base Harvest"
+
+Timestep    5
+
+ManagementAreas 	./input_rasters/managementAreas.tif
+Stands      		./input_rasters/standMap.tif
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>>>>>> PRESCRIPTIONS
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+Prescription CPRS
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>   
+	StandRanking 	Economic
+	>> 	Species 	EconomicRank 	Minimum Age
+    	>> ------- ------------ -----------
+    	PINU.STR		100		61
+		PICE.MAR		91		61
+		PICE.GLA		91		61		
+		PICE.RUB		91		61
+		PINU.RES		86		61
+		ABIE.BAL		86		61
+		THUJ.SPP.ALL	82		61
+		PINU.BAN		76		61
+		TSUG.CAN		66		61
+		POPU.TRE		55		61
+		LARI.LAR		47		61
+
+	
+ 	>>ForestTypeTable 
+     >> InclusionRule   ageRange    %Cells	species
+     >>-------------------------------------------------------- 
+	>>Forbidden	61-999	    highest	ACER.SAH FAGU.GRA QUER.RUB 
+
+	MinimumTimeSinceLastHarvest 35
+	
+	SiteSelection Complete
+
+	CohortsRemoved SpeciesList
+	>> Species Selection
+	>> ------- ---------
+
+	POPU.TRE	21-999
+	BETU.PAP	21-999
+	ABIE.BAL	21-999
+	PICE.MAR	21-999
+	PICE.GLA	21-999
+	PICE.RUB	21-999
+	LARI.LAR	21-999
+	PINU.BAN	21-999
+	PINU.STR	21-999
+	PINU.RES	21-999
+	BETU.ALL	21-999
+	QUER.RUB	21-999
+	ACER.SAH	21-999
+	ACER.RUB	21-999
+	FAGU.GRA	21-999
+	TSUG.CAN	21-999
+	THUJ.SPP.ALL	21-999
+	
+	
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  
+Prescription CJ
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+	
+
+    StandRanking    Economic
+    >> Species EconomicRank 	Minimum Age
+    >> ------- ------------ -----------
+    	BETU.ALL	100	61
+		BETU.PAP	100	61
+		QUER.RUB	80	61
+		PINU.STR	66	61
+		PICE.MAR	60	61
+		PICE.RUB	60	61
+		PINU.RES	57	61
+		THUJ.SPP.ALL	54	61
+		ACER.SAH	53	61
+		ACER.RUB	53	61
+		TSUG.CAN	44	61
+		FAGU.GRA	39	61
+
+	
+ 	>>ForestTypeTable    << Érablières
+     >> InclusionRule   ageRange    %Cells    species
+     >>--------------------------------------------------------
+	>>Forbidden	61-999	    highest   POPU.TRE ABIE.BAL PICE.GLA LARI.LAR PINU.BAN
+
+	MinimumTimeSinceLastHarvest 35
+	
+	SiteSelection Complete
+	
+	CohortsRemoved SpeciesList
+	>> Species Selection
+	>> ------- ---------
+	ACER.SAH	1/3
+	BETU.ALL	1/3
+	QUER.RUB	1/3
+	ACER.RUB	1/3
+	FAGU.GRA	1/3
+	PINU.STR	1/3
+	PINU.RES	1/3
+	TSUG.CAN	1/3
+	THUJ.SPP.ALL	1/3
+	POPU.TRE	All
+	BETU.PAP	All
+	ABIE.BAL	All
+	PICE.MAR	1/3
+	PICE.GLA	1/3
+	PICE.RUB	1/3
+	LARI.LAR	1/3
+	PINU.BAN	1/3
+
+	
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  
+Prescription Firewood
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+	StandRanking    Economic
+    >> Species EconomicRank 	Minimum Age
+    >> ------- ------------ -----------
+	BETU.ALL		100			61
+	BETU.PAP		60			61
+	QUER.RUB		100			61
+	PINU.STR		30			61
+	PICE.MAR		30			61
+	PICE.GLA		30			61
+	PICE.RUB		30			61
+	PINU.RES		30			61
+	ABIE.BAL		30			61
+	THUJ.SPP.ALL	30			61
+	ACER.SAH		100			61
+	ACER.RUB		100			61
+	PINU.BAN		30			61
+	TSUG.CAN		30			61
+	FAGU.GRA		100			61
+	POPU.TRE		60			61
+	LARI.LAR		30			61
+
+
+     >>ForestTypeTable    << Érablières
+     >> InclusionRule   ageRange    	%Cells		species
+     >>--------------------------------------------------------
+	 >>Required    	61-999      	highest     	ACER.SAH FAGU.GRA QUER.RUB BETU.ALL ACER.RUB
+
+
+	SiteSelection Complete
+	
+	CohortsRemoved SpeciesList	
+
+	>> Species Selection
+	>> ------- ---------
+	ACER.SAH		1/6
+	BETU.ALL		1/6
+	QUER.RUB		1/6
+	ACER.RUB		1/6
+	FAGU.GRA		1/6
+	PINU.STR		1/6
+	PINU.RES		1/6
+	TSUG.CAN		1/6
+	THUJ.SPP.ALL	1/6
+	POPU.TRE		1/6
+	BETU.PAP		1/6
+	ABIE.BAL		1/6
+	PICE.MAR		1/6
+	PICE.GLA		1/6
+	PICE.RUB		1/6
+	LARI.LAR		1/6
+	PINU.BAN		1/6
+
+	
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>> HARVESTING IMPLEMENTATION 
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+    HarvestImplementations
+>>  Mgmt Area   Prescription    Harvest Area    Begin Time  End Time
+>>  ---------   ------------    ------------    ----------  --------
+	1			CPRS			6.26%			1	
+	1			CJ				0.85%			1	
+	1			Firewood		14.81%			1	
+	2			CPRS			6.26%			1
+	2			CJ				0.85%			1
+	3			CPRS			5.49%			1	
+	3			CJ				0.69%			1	
+	3			Firewood		14.04%			1	
+	4			CPRS			5.49%			1
+	4			CJ				0.69%			1
+	5			CPRS			5.49%			1	
+	5			CJ				0.69%			1	
+	5			Firewood		5.55%			1	
+	6			CPRS			5.49%			1
+	6			CJ				0.69%			1
+	
+>>Mgmt area 1 = Private Portneuf , 2=Public Portneuf, 3 = Private Shawinigan, 4=Public Shawinigan, 5 = Private Mekinac, 6=Public Mekinac, 
+>>7=Uncut Portneuf, 8=Uncut Shawinigan, 9=Uncut Mekinac
+
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+>> OUTPUTS
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+PrescriptionMaps    harvest/prescripts-{timestep}.img
+EventLog            harvest/harvest-event-test-log.csv
+SummaryLog	    	harvest/summary-log.csv
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
