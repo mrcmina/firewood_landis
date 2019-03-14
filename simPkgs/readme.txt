@@ -13,6 +13,8 @@ Please include a 'readme.txt' file (like this one) in each simulation package
 to provide any useful information, such as the LANDIS-II version for which the file
 package was prepared.
 
+The folder 'LANDIS_Installers' contains the model versions used for all simulations. 
+
 For any question or additional info please contact dominic.cyr@canada.ca.
 
 
