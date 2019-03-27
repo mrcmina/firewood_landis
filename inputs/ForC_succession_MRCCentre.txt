@@ -1,6 +1,6 @@
 LandisData  "ForC Succession"
 
->>Landscape: MRC Centre
+>> Landscape: MRC Centre
 
 Timestep  1
 
@@ -8,8 +8,8 @@ SeedingAlgorithm  WardSeedDispersal
 
 ClimateFile	"ClimateInput.txt"
 
-InitialCommunities      ./initial_communities.dat
-InitialCommunitiesMap   ./input_rasters/initial_communities.tif
+InitialCommunities      "./initial_communities.dat"
+InitialCommunitiesMap   "./input_rasters/initial_communities.tif"
 >> SnagFile	"Snag_example.txt"
 
 
@@ -18,7 +18,7 @@ ForCSOutput
 >> Output interval
 >>  Biomass     DOM_Pools   Fluxes	Summary
 >>  ----------------------------------------------------------------
- 	   5     	  5         5	      5
+ 	   5     	  5           5	      5
 
 	   
 SoilSpinUp
@@ -103,6 +103,7 @@ EcoSppDOMParameters
 >>Ecor  Species   DOM  	Decay  	Amount	Q10Ref 
 >>                Pool 	Rate   	at T0	Temp10C
 >>  ------------------------------------------------------------------------------	
+ecoregion	species	DOMpool	DecayRate	AmountT0	Q10
 415_1	ABIE.BAL	1	0.3550	10.0254	2.65
 415_1	ABIE.BAL	2	0.5000	4.7062	2.00
 415_1	ABIE.BAL	3	0.1435	3.4022	2.00
