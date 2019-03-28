@@ -33,7 +33,7 @@ cl = makeCluster(clusterN, outfile = "") ##
 registerDoSNOW(cl)
 
 
-summaryLanscape <- foreach(i = 1:nrow(simInfo), .combine="rbind") %dopar% {
+outputSummaryLandscape <- foreach(i = 1:nrow(simInfo), .combine="rbind") %dopar% {
     require(dplyr)
     require(raster)
     require(reshape2)
@@ -109,6 +109,6 @@ summaryLanscape <- foreach(i = 1:nrow(simInfo), .combine="rbind") %dopar% {
 }
 
 stopCluster(cl)
-save(dfSummary, file = "summaryLanscape.RData")
+save(outputSummaryLandscape, file = "outputSummaryLandscape.RData")
 
 # 
