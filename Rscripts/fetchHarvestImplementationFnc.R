@@ -1,7 +1,7 @@
 ### A function that reads the LANDIS-II 'base-harvest.txt' input file
 ### and returns the harvest implementation table as a data.frame
 
-fetchHarvestImplementation <- function(x) {
+fetchHarvestImplementation <- function(x, prescripLvls) {
     
     HarvestImpTmp <- readLines(x)
     index <- grep("HarvestImplementations|PrescriptionMaps", HarvestImpTmp)
