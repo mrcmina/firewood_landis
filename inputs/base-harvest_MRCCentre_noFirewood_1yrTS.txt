@@ -1,9 +1,9 @@
 ﻿LandisData  "Base Harvest"
 
-Timestep    5
+Timestep    1
 
-ManagementAreas  ./input_rasters/managementAreas.tif
-Stands           ./input_rasters/standMap.tif
+ManagementAreas 	management-areas.tif
+Stands      		stand-map.tif
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 >>>>>> PRESCRIPTIONS
@@ -15,13 +15,13 @@ Prescription CPRS
 	StandRanking 	Economic
 	>> 	Species 	EconomicRank 	Minimum Age
     	>> ------- ------------ -----------
-    		PINU.STR		100		61
+    	PINU.STR		100		61
 		PICE.MAR		91		61
 		PICE.GLA		91		61		
 		PICE.RUB		91		61
 		PINU.RES		86		61
 		ABIE.BAL		86		61
-		THUJ.SPP.ALL		82		61
+		THUJ.SPP.ALL	82		61
 		PINU.BAN		76		61
 		TSUG.CAN		66		61
 		POPU.TRE		55		61
@@ -40,6 +40,7 @@ Prescription CPRS
 	CohortsRemoved SpeciesList
 	>> Species Selection
 	>> ------- ---------
+
 	POPU.TRE	21-999
 	BETU.PAP	21-999
 	ABIE.BAL	21-999
@@ -67,7 +68,7 @@ Prescription CJ
     StandRanking    Economic
     >> Species EconomicRank 	Minimum Age
     >> ------- ------------ -----------
-    		BETU.ALL	100	61
+    	BETU.ALL	100	61
 		BETU.PAP	100	61
 		QUER.RUB	80	61
 		PINU.STR	66	61
@@ -112,64 +113,6 @@ Prescription CJ
 	PINU.BAN	1/3
 
 	
-
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  
-Prescription Firewood
->>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
-
-	StandRanking    Economic
-    >> Species EconomicRank 	Minimum Age
-    >> ------- ------------ -----------
-	BETU.ALL		100			61
-	BETU.PAP		60			61
-	QUER.RUB		100			61
-	PINU.STR		30			61
-	PICE.MAR		30			61
-	PICE.GLA		30			61
-	PICE.RUB		30			61
-	PINU.RES		30			61
-	ABIE.BAL		30			61
-	THUJ.SPP.ALL		30			61
-	ACER.SAH		100			61
-	ACER.RUB		100			61
-	PINU.BAN		30			61
-	TSUG.CAN		30			61
-	FAGU.GRA		100			61
-	POPU.TRE		60			61
-	LARI.LAR		30			61
-
-
-     >>ForestTypeTable    << Érablières
-     >> InclusionRule   ageRange    	%Cells		species
-     >>--------------------------------------------------------
-	 >>Required    	61-999      	highest     	ACER.SAH FAGU.GRA QUER.RUB BETU.ALL ACER.RUB
-
-	SiteSelection Complete
-	
-	CohortsRemoved SpeciesList	
-	>> Species Selection
-	>> ------- ---------
-	ACER.SAH		1/6
-	BETU.ALL		1/6
-	QUER.RUB		1/6
-	ACER.RUB		1/6
-	FAGU.GRA		1/6
-	PINU.STR		1/6
-	PINU.RES		1/6
-	TSUG.CAN		1/6
-	THUJ.SPP.ALL	1/6
-	POPU.TRE		1/6
-	BETU.PAP		1/6
-	ABIE.BAL		1/6
-	PICE.MAR		1/6
-	PICE.GLA		1/6
-	PICE.RUB		1/6
-	LARI.LAR		1/6
-	PINU.BAN		1/6
-
-
-
-
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 >> HARVESTING IMPLEMENTATION 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -177,24 +120,23 @@ Prescription Firewood
     HarvestImplementations
 >>  Mgmt Area   Prescription    Harvest Area    Begin Time  End Time
 >>  ---------   ------------    ------------    ----------  --------
-	1			CPRS			1.03%			1	
-	1			CJ				0.45%			1	
-	1			Firewood		10.76%			1	
-	2			CPRS			1.03%			1
-	2			CJ				0.45%			1
-	3			CPRS			2.73%			1	
-	3			CJ				0.94%			1	
-	3			Firewood		1.25%			1	
-	4			CPRS			2.73%			1
-	4			CJ				0.94%			1
-	5			CPRS			1.03%			1	
-	5			CJ				0.45%			1	
-	5			Firewood		10.23%			1	
-	6			CPRS			1.03%			1
-	6			CJ				0.45%			1
+1	CPRS	1.25%	1
+1	CJ		0.17%	1
+2	CPRS	1.25%	1
+2	CJ		0.17%	1
+3	CPRS	1.10%	1
+3	CJ		0.14%	1
+4	CPRS	1.10%	1
+4	CJ		0.14%	1
+5	CPRS	1.10%	1
+5	CJ		0.14%	1
+6	CPRS	1.10%	1
+6	CJ		0.14%	1
+
+
 	
->>Mgmt area 1 = Private Papineau , 2=Public Papineau, 3 = Private Pontiac, 4=Public Pontiac, 5 = Private Collines, 6=Public Collines, 
->>7=Uncut Papineau, 8=Uncut Pontiac, 9=Uncut Collines
+>>Mgmt area 1 = Private Portneuf , 2=Public Portneuf, 3 = Private Shawinigan, 4=Public Shawinigan, 5 = Private Mekinac, 6=Public Mekinac, 
+>>7=Uncut Portneuf, 8=Uncut Shawinigan, 9=Uncut Mekinac
 
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>

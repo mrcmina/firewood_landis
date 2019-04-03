@@ -6,11 +6,11 @@ Timestep  1
 
 SeedingAlgorithm  WardSeedDispersal
 
-ClimateFile	"ClimateInput.txt"
+ClimateFile	climate-inputs.txt
 
-InitialCommunities      "./initial_communities.dat"
-InitialCommunitiesMap   "./input_rasters/initial_communities.tif"
->> SnagFile	"Snag_example.txt"
+InitialCommunities      initial-communities.dat
+InitialCommunitiesMap   initial-communities.tif
+>> SnagFile	"snags.txt"
 
 
 ForCSOutput
@@ -18,7 +18,7 @@ ForCSOutput
 >> Output interval
 >>  Biomass     DOM_Pools   Fluxes	Summary
 >>  ----------------------------------------------------------------
- 	   5     	  5           5	      5
+ 	10     	    10           10	      1
 
 	   
 SoilSpinUp
@@ -103,7 +103,6 @@ EcoSppDOMParameters
 >>Ecor  Species   DOM  	Decay  	Amount	Q10Ref 
 >>                Pool 	Rate   	at T0	Temp10C
 >>  ------------------------------------------------------------------------------	
-ecoregion	species	DOMpool	DecayRate	AmountT0	Q10
 420_1	ABIE.BAL	1	0.3550	5.6996	2.65
 420_1	ABIE.BAL	2	0.5000	2.6793	2.00
 420_1	ABIE.BAL	3	0.1435	1.9843	2.00

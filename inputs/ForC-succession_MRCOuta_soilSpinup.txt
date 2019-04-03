@@ -6,11 +6,11 @@ Timestep  1
 
 SeedingAlgorithm  WardSeedDispersal
 
-ClimateFile	"ClimateInput.txt"
+ClimateFile	climate-inputs.txt
 
-InitialCommunities      "./initial_communities.dat"
-InitialCommunitiesMap   "./input_rasters/initial_communities.tif"
->> SnagFile	"Snag_example.txt"
+InitialCommunities      initial-communities.dat
+InitialCommunitiesMap   initial-communities.tif
+>> SnagFile	"snags.txt"
 
 
 ForCSOutput
@@ -18,7 +18,7 @@ ForCSOutput
 >> Output interval
 >>  Biomass     DOM_Pools   Fluxes	Summary
 >>  ----------------------------------------------------------------
- 	   1     	  1           1	      1
+ 	1    	    1           1	      1
 
 	   
 SoilSpinUp

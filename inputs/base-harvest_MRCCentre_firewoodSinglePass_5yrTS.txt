@@ -2,8 +2,8 @@
 
 Timestep    5
 
-ManagementAreas 	./input_rasters/managementAreas.tif
-Stands      		./input_rasters/standMap.tif
+ManagementAreas 	management-areas.tif
+Stands      		stand-map.tif
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 >>>>>> PRESCRIPTIONS
@@ -40,7 +40,6 @@ Prescription CPRS
 	CohortsRemoved SpeciesList
 	>> Species Selection
 	>> ------- ---------
-
 	POPU.TRE	21-999
 	BETU.PAP	21-999
 	ABIE.BAL	21-999
@@ -113,6 +112,65 @@ Prescription CJ
 	PINU.BAN	1/3
 
 	
+
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>  
+Prescription Firewood
+>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
+
+	StandRanking    Economic
+    >> Species EconomicRank 	Minimum Age
+    >> ------- ------------ -----------
+	BETU.ALL		100			61
+	BETU.PAP		60			61
+	QUER.RUB		100			61
+	PINU.STR		30			61
+	PICE.MAR		30			61
+	PICE.GLA		30			61
+	PICE.RUB		30			61
+	PINU.RES		30			61
+	ABIE.BAL		30			61
+	THUJ.SPP.ALL	30			61
+	ACER.SAH		100			61
+	ACER.RUB		100			61
+	PINU.BAN		30			61
+	TSUG.CAN		30			61
+	FAGU.GRA		100			61
+	POPU.TRE		60			61
+	LARI.LAR		30			61
+
+
+     >>ForestTypeTable    << Érablières
+     >> InclusionRule   ageRange    	%Cells		species
+     >>--------------------------------------------------------
+	 >>Required    	61-999      	highest     	ACER.SAH FAGU.GRA QUER.RUB BETU.ALL ACER.RUB
+
+
+	SiteSelection Complete
+	
+	CohortsRemoved SpeciesList	
+
+	>> Species Selection
+	>> ------- ---------
+	ACER.SAH		1/6
+	BETU.ALL		1/6
+	QUER.RUB		1/6
+	ACER.RUB		1/6
+	FAGU.GRA		1/6
+	PINU.STR		1/6
+	PINU.RES		1/6
+	TSUG.CAN		1/6
+	THUJ.SPP.ALL	1/6
+	POPU.TRE		1/6
+	BETU.PAP		1/6
+	ABIE.BAL		1/6
+	PICE.MAR		1/6
+	PICE.GLA		1/6
+	PICE.RUB		1/6
+	LARI.LAR		1/6
+	PINU.BAN		1/6
+
+	
+
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 >> HARVESTING IMPLEMENTATION 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
@@ -122,14 +180,17 @@ Prescription CJ
 >>  ---------   ------------    ------------    ----------  --------
 	1			CPRS			6.26%			1	
 	1			CJ				0.85%			1	
+	1			Firewood		14.81%			1	
 	2			CPRS			6.26%			1
 	2			CJ				0.85%			1
 	3			CPRS			5.49%			1	
 	3			CJ				0.69%			1	
+	3			Firewood		14.04%			1	
 	4			CPRS			5.49%			1
 	4			CJ				0.69%			1
 	5			CPRS			5.49%			1	
 	5			CJ				0.69%			1	
+	5			Firewood		5.55%			1	
 	6			CPRS			5.49%			1
 	6			CJ				0.69%			1
 	

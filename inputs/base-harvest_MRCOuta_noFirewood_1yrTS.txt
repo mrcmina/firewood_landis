@@ -1,9 +1,9 @@
 ﻿LandisData  "Base Harvest"
 
-Timestep    5
+Timestep    1
 
-ManagementAreas  ./input_rasters/managementAreas.tif
-Stands           ./input_rasters/standMap.tif
+ManagementAreas 	management-areas.tif
+Stands      		stand-map.tif
 
 >>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>>
 >>>>>> PRESCRIPTIONS
@@ -15,13 +15,13 @@ Prescription CPRS
 	StandRanking 	Economic
 	>> 	Species 	EconomicRank 	Minimum Age
     	>> ------- ------------ -----------
-    		PINU.STR		100		61
+    	PINU.STR		100		61
 		PICE.MAR		91		61
 		PICE.GLA		91		61		
 		PICE.RUB		91		61
 		PINU.RES		86		61
 		ABIE.BAL		86		61
-		THUJ.SPP.ALL		82		61
+		THUJ.SPP.ALL	82		61
 		PINU.BAN		76		61
 		TSUG.CAN		66		61
 		POPU.TRE		55		61
@@ -119,18 +119,19 @@ Prescription CJ
     HarvestImplementations
 >>  Mgmt Area   Prescription    Harvest Area    Begin Time  End Time
 >>  ---------   ------------    ------------    ----------  --------
-	1			CPRS			1.03%			1	
-	1			CJ				0.45%			1	
-	2			CPRS			1.03%			1
-	2			CJ				0.45%			1
-	3			CPRS			2.73%			1	
-	3			CJ				0.94%			1	
-	4			CPRS			2.73%			1
-	4			CJ				0.94%			1
-	5			CPRS			1.03%			1	
-	5			CJ				0.45%			1	
-	6			CPRS			1.03%			1
-	6			CJ				0.45%			1
+1	CPRS	0.206%	1
+1	CJ		0.090%	1
+2	CPRS	0.206%	1
+2	CJ		0.090%	1
+3	CPRS	0.546%	1
+3	CJ		0.188%	1
+4	CPRS	0.546%	1
+4	CJ		0.188%	1
+5	CPRS	0.206%	1
+5	CJ		0.090%	1
+6	CPRS	0.206%	1
+6	CJ		0.090%	1
+
 	
 >>Mgmt area 1 = Private Papineau , 2=Public Papineau, 3 = Private Pontiac, 4=Public Pontiac, 5 = Private Collines, 6=Public Collines, 
 >>7=Uncut Papineau, 8=Uncut Pontiac, 9=Uncut Collines
