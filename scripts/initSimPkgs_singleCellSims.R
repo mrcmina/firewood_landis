@@ -14,11 +14,29 @@ setwd(wwd)
 #############
 require(stringr)
 
-spinUp <- T
+#spinUp <- T
 
 inputDir <- "../inputs"
+timestep <- 1
+simDuration <- 1000
+simArea <- "MRCCentre"
 #inputs <- list.files(inputDir)
-    
+
+
+
+### loading landtypes
+landtypes_RAT <- read.table(paste0(inputDir, "/landtypes_", simArea, ".txt"),
+                             skip = 1,comment.char = ">")
+colnames(landtypes_RAT) <- c("Active", "Code", "Name", "Description")
+
+
+##############################
+
+speciesList <- 
+    c("ACER.SAH 1")
+
+
+
 timestep <- 1
 expDesign <- list(scenario = "baseline",
                   area = c("MRCCentre", "MRCOuta"),
@@ -27,7 +45,8 @@ expDesign <- list(scenario = "baseline",
 
 simInfo <- expand.grid(scenario = expDesign$scenario, 
                        areaName = expDesign$area,
-                       treatment = expDesign$treatment,
+                       landtypes = "415_1",
+                       
                        replicate = 1:expDesign$nrep)
 
 sID <- (1:nrow(simInfo))-1

@@ -9,6 +9,7 @@ dir.create(wwd)
 setwd(wwd)
 
 unitConvFact <- 0.01 ### from gC /m2 to tonnes per ha
+# outputSummaryLandscape <- get(load("outputSummaryLandscape.RData"))
 outputSummaryLandscape <- get(load("../outputsCompiled/outputSummaryLandscape.RData"))
 
 
@@ -18,10 +19,10 @@ require(tidyr)
 
 ### pools
 df <- outputSummaryLandscape %>%
-    filter(Time >=5,
+    filter(Time >=1,
            tenure == "Privé",
            variable %in% c("ABio",  "BBio", "TotalDOM"),
-           treatment %in% c("firewoodSingleHarv", "noFirewoodHarv")) %>%
+           treatment %in% c("firewoodSinglePass", "noFirewood")) %>%
     mutate(group = paste(mgmtAreaName, treatment))
     
 
@@ -34,9 +35,10 @@ ggplot(df, aes(x = Time, y = value*unitConvFact, group = group,
               colour = treatment)) +
     theme_dark() +
     facet_grid(MRC ~ variable  ) +
+    #facet_wrap(~ variable  ) +
     geom_line() +
-    scale_color_manual(values = c(firewoodSingleHarv = "darkgoldenrod1",#"firebrick1",
-                                  noFirewoodHarv = "cyan")) +
+    scale_color_manual(values = c(firewoodSinglePass = "darkgoldenrod1",#"firebrick1",
+                                  noFirewood = "cyan")) +
     theme(plot.caption = element_text(size = rel(.5), hjust = 0)) +
     labs(title = "Summary of aggregated pools",
          x = "",
@@ -75,12 +77,12 @@ dev.off()
 ### fluxes
 df <- outputSummaryLandscape %>%
     filter(#tenure == "Privé",
-        Time >=5,   
+        Time >=1,   
         variable %in% c("DelBio",  "Turnover",
                            "NetGrowth",  "NPP",
                            "Rh",  "NEP",
                            "NBP"),
-           treatment %in% c("firewoodSingleHarv", "noFirewoodHarv")) %>%
+           treatment %in% c("firewoodSinglePass", "noFirewood")) %>%
     mutate(group = paste(mgmtAreaName, treatment))
 
 
@@ -94,8 +96,8 @@ ggplot(df, aes(x = Time, y = value*unitConvFact, group = group,
     theme_dark() +
     geom_hline(yintercept = 0, linetype = 1, color = "grey35", size = 0.35) +
     geom_line() +
-    scale_color_manual(values = c(firewoodSingleHarv = "darkgoldenrod1",#"firebrick1",
-                                  noFirewoodHarv = "cyan")) +
+    scale_color_manual(values = c(firewoodSinglePass = "darkgoldenrod1",#"firebrick1",
+                                  noFirewood = "cyan")) +
     theme(plot.caption = element_text(size = rel(.5), hjust = 0)) +
     labs(title = "Summary of global fluxes",
          x = "",
@@ -120,24 +122,24 @@ df <- outputSummaryLandscape %>%
     filter(tenure == "Privé",
            Time >=5,
            variable %in% c("NEP", "NBP"),
-           treatment %in% c("firewoodSingleHarv", "noFirewoodHarv"))
+           treatment %in% c("firewoodSinglePass", "noFirewood"))
 
 dfArea <- distinct(df[, c("MRC", "tenure", "area_ha")])
 
-dfFW <- df %>%
+dfFW <- head(df %>%
     spread(variable, value) %>%
     mutate(toFPS = NBP - NEP) %>%
-    spread(treatment, toFPS) %>%
+    spread(treatment, toFPS)) %>%
     group_by(MRC, Time) %>%
-    summarise(firewoodBurning = -(max(firewoodSingleHarv, na.rm = T)
-              - max(noFirewoodHarv, na.rm = T))) %>%
+    summarise(firewoodBurning = -(max(firewoodSinglePass, na.rm = T)
+              - max(noFirewood, na.rm = T))) %>%
     mutate(firewoodBurning = ifelse(firewoodBurning <= 0, 0, firewoodBurning))
 
 dfEmissions <- df %>%
     filter(variable == "NEP") %>%
     group_by(MRC, Time) %>%
-    summarize(NEPgain = value[which(treatment == "noFirewoodHarv")] -
-                  value[which(treatment == "firewoodSingleHarv")]) %>%
+    summarize(NEPgain = value[which(treatment == "noFirewood")] -
+                  value[which(treatment == "firewoodSinglePass")]) %>%
     
     merge(dfFW) %>%
     mutate(NEPgain = ifelse(firewoodBurning <= 0, 0, NEPgain)) %>%
