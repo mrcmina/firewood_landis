@@ -30,7 +30,7 @@ require(doSNOW)
 require(parallel)
 require(foreach)
 
-clusterN <- 6
+clusterN <- 4
 #######
 cl = makeCluster(clusterN, outfile = "") ##
 registerDoSNOW(cl)

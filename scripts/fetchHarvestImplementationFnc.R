@@ -13,7 +13,7 @@ fetchHarvestImplementation <- function(x, prescripLvls) {
         x <- x[nchar(x)!=0]
         tmp <- data.frame(mgmtArea = as.numeric(x[1]),
                           prescription = factor(x[2], levels = prescriptLvls),
-                          harvestAreaProp = as.numeric(gsub("%", "", x[3]))/100,
+                          harvestAreaProp_target = as.numeric(gsub("%", "", x[3]))/100,
                           beginTime = x[4])
         if(i == 1) {
             HarvestImplementations <- tmp

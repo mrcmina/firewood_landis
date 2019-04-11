@@ -126,10 +126,10 @@ df <- outputSummaryLandscape %>%
 
 dfArea <- distinct(df[, c("MRC", "tenure", "area_ha")])
 
-dfFW <- head(df %>%
+dfFW <- df %>%
     spread(variable, value) %>%
     mutate(toFPS = NBP - NEP) %>%
-    spread(treatment, toFPS)) %>%
+    spread(treatment, toFPS) %>%
     group_by(MRC, Time) %>%
     summarise(firewoodBurning = -(max(firewoodSinglePass, na.rm = T)
               - max(noFirewood, na.rm = T))) %>%
@@ -142,7 +142,7 @@ dfEmissions <- df %>%
                   value[which(treatment == "firewoodSinglePass")]) %>%
     
     merge(dfFW) %>%
-    mutate(NEPgain = ifelse(firewoodBurning <= 0, 0, NEPgain)) %>%
+    #mutate(NEPgain = ifelse(firewoodBurning <= 0, 0, NEPgain)) %>%
     gather(key = "variable", value = "value", -MRC, -Time)
 
 dfEmissions <- dfEmissions %>%
@@ -150,7 +150,7 @@ dfEmissions <- dfEmissions %>%
     mutate(netEmissions = firewoodBurning + NEPgain) %>%
     gather(key = "variable", value = "value", -MRC, -Time, -netEmissions) %>%
     merge(dfArea)
-    
+
 
 varLvls <- c(firewoodBurning = "Firewood burning",
              NEPgain = "NEP gain")
@@ -159,7 +159,7 @@ labDf <- distinct(dfEmissions[,c("MRC", "area_ha")])
 labDf[,"lab"] <- paste("Total area (private tenure) :", labDf$area_ha, "ha")
 
 
-
+#####################
 png(filename= paste0("emissions_Firewood.png"),
     width = 10, height = 5, units = "in", res = 600, pointsize=10)
 
@@ -167,7 +167,8 @@ options(scipen=999)
 
 ggplot() + 
     stat_summary(data = dfEmissions,
-                 aes(x = Time, y = value*unitConvFact*area_ha, fill = variable),
+                 aes(x = Time, y = value*unitConvFact*area_ha,
+                     fill = variable),
                  fun.y="sum", geom="area", position = "stack") +
     scale_fill_manual("", values = c("firebrick2", "darkolivegreen2")) +
     facet_wrap(~ MRC, ncol = 3) +
@@ -178,7 +179,7 @@ ggplot() +
     scale_colour_manual("", values = "white", label = "Net emissions") +
     theme_dark() +
     geom_text(data = labDf, aes(x = 100,
-                                y = max(dfEmissions$value * unitConvFact* dfEmissions$area_ha),
+                                y = 35000, #max(dfEmissions$value * unitConvFact* dfEmissions$area_ha),
                                 label = lab),
               hjust = 1, size = 2) +
     theme(plot.caption = element_text(size = rel(.5), hjust = 0),
