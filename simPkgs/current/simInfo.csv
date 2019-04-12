@@ -1,0 +1,5 @@
+"simID","scenario","areaName","treatment","replicate"
+"0","baseline","MRCCentre","firewoodSinglePass",1
+"1","baseline","MRCOuta","firewoodSinglePass",1
+"2","baseline","MRCCentre","noFirewood",1
+"3","baseline","MRCOuta","noFirewood",1

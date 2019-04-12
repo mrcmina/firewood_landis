@@ -1,0 +1,19 @@
+area,id,value
+MRCCentre,1,Portneuf - Privé
+MRCCentre,2,Portneuf - Public
+MRCCentre,3,Shawinigan - Privé
+MRCCentre,4,Shawinigan - Public
+MRCCentre,5,Mékinac - Privé
+MRCCentre,6,Mékinac - Public
+MRCCentre,7,Portneuf - Pas de récolte
+MRCCentre,8,Shawinigan - Pas de récolte
+MRCCentre,9,Mékinac - Pas de récolte
+MRCOuta,1,Papineau - Privé
+MRCOuta,2,Papineau - Public
+MRCOuta,3,Pontiac - Privé
+MRCOuta,4,Pontiac - Public
+MRCOuta,5,Collines - Privé
+MRCOuta,6,Collines - Public
+MRCOuta,7,Papineau - Pas de récolte
+MRCOuta,8,Pontiac - Pas de récolte
+MRCOuta,9,Collines - Pas de récolte
