@@ -25,7 +25,7 @@ This repository contains input files, documentation and simulation outputs (comi
 
 ### Study area
 
-The study areas are located in the Sugar Maple and Yellow birch bioclimatic domain of Southern Quebec (Fig. 1). More specifically each of the simulated areas includes 3 MRCs _(Municipalités régionales de comté)_. The westernmost one is located in Outaouais, while the other one is located in Mauricie and Centre-du-Québec.
+The study areas are located in the Sugar Maple and Yellow birch bioclimatic domain of Southern Quebec. More specifically each of the simulated areas includes three MRCs [_(Municipalités régionales de comté)_][3]. The westernmost one is located in Outaouais, while the other one is located in Mauricie and Centre-du-Québec.
 
 For a more detailed description of each simulation areas, with associated results, click on the links below.
 
@@ -33,8 +33,9 @@ For a more detailed description of each simulation areas, with associated result
 - [MRC 'Outaouais' (Collines, Papineau, Pontiac)][2]
 
 
-[1]: https://github.com/dcyr/firewood_landis/MRCCentre.md
-[2]: https://github.com/dcyr/firewood_landis/MRCOuta.md
+[1]: https://github.com/dcyr/firewood_landis/blob/master/MRCCentre.md
+[2]: https://github.com/dcyr/firewood_landis/blob/master/MRCOuta.md
+[3]: https://en.wikipedia.org/wiki/Regional_county_municipality
 
 
 -----------  
@@ -47,7 +48,7 @@ For a more detailed description of each simulation areas, with associated result
 ### Preliminary results
 Disclaimer: These results are preliminary and __will__ change. They are presented here to verify the current implementation of the experiment and the overall dynamics of the simulated systems. Modification of the input parameters are planned and may substantially affect results.
 
-Note that net emissions caused associated with production and consumption of firewood are currently estimated indirectly, which explains some of the interannual variations. Upcoming simulations (replication of each treatment) will smooth out some of those variations.
+Note that net emissions associated with production and consumption of firewood are currently estimated indirectly, which causes some of the interannual variations. Upcoming simulations, which will include replications of each treatment, will smooth out some of those variations.
   
   
 ![](figures/emissions_Firewood.png)
