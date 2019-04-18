@@ -13,7 +13,7 @@ unitConvFact <- 0.01 ### from gC /m2 to tonnes per ha
 source("../scripts/fetchHarvestImplementationFnc.R")
 
 ### fetching outputs
-simDir <- "."
+simDir <- "D:/Landis_ForCS_singleCellSims/MRCOuta_CPRS"
 simInfo <- read.csv(paste(simDir, "simInfo.csv", sep = "/"),
                     colClasses=c("simID"="character"))
 

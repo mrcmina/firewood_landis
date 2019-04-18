@@ -39,7 +39,7 @@ speciesList <- list(mishmash = paste(c("ACER.SAH 1", "BETU.ALL 1",
 timestep <- 1
 expDesign <- list(area = simArea,
                   landtypes = c("423_1", "425_1"),
-                  treatment = list("CJ" = seq(from = 250, to = simDuration, by = 35)),
+                  treatment = list("CPRS" = seq(from = 100, to = simDuration, by = 35)),
                   nrep = 25)
 
 simInfo <- expand.grid(areaName = expDesign$area,

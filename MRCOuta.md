@@ -10,7 +10,7 @@ output:
     toc: no
 ---
 
-Updated on Apr 12 2019
+Updated on Apr 18 2019
 
 
 -------
@@ -20,7 +20,7 @@ Updated on Apr 12 2019
 
 For a more general description of this project, its associated objectives and experimental design, [click here][1]
 
-[1]: https://github.com/dcyr/firewood_landis/
+
 
 -----------
 
@@ -36,9 +36,11 @@ For a more general description of this project, its associated objectives and ex
 ## Preliminary results 
   
 
-### With firewood harvesting ([animated figure here][2])
-[2]: https://github.com/dcyr/firewood_landis/blob/master/figures/harv_MRCOuta_firewoodSinglePass_anim.gif
-  
+### With firewood harvesting  
+
+[Animated figure here][2] (right-click to save on disk - recommended)
+
+
 ![](figures/harv_MRCCentre_firewoodSinglePass_lastPrescr.png)
   
   
@@ -46,13 +48,22 @@ For a more general description of this project, its associated objectives and ex
 
 
 
-### Without firewood harvesting ([animated figure here][3])
-[3]: https://github.com/dcyr/firewood_landis/blob/master/figures/harv_MRCOuta_noFirewood_anim.gif
+### Without firewood harvesting  
   
+[Animated figure here][3] (right-click to save on disk - recommended)
+
 ![](figures/harv_MRCOuta_noFirewood_lastPrescr.png)
   
   
 ![](figures/harvRates_MRCOuta_3.png)
 
+
+### Single-cell simulations
+![](figures/pools_Summary_singleCellSims_MRCOuta.png)
+
+
+[1]: https://github.com/dcyr/firewood_landis/
+[2]: https://github.com/dcyr/firewood_landis/blob/master/figures/harv_MRCOuta_firewoodSinglePass_anim.gif
+[3]: https://github.com/dcyr/firewood_landis/blob/master/figures/harv_MRCOuta_noFirewood_anim.gif
 
 
