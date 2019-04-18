@@ -63,7 +63,8 @@ For a more general description of this project, its associated objectives and ex
 
 
 [1]: https://github.com/dcyr/firewood_landis/
-[2]: https://github.com/dcyr/firewood_landis/blob/master/figures/harv_MRCOuta_firewoodSinglePass_anim.gif
-[3]: https://github.com/dcyr/firewood_landis/blob/master/figures/harv_MRCOuta_noFirewood_anim.gif
+[2]: https://github.com/dcyr/firewood_landis/raw/master/figures/harv_MRCOuta_firewoodSinglePass_anim.gif
+[3]: https://github.com/dcyr/firewood_landis/raw/master/figures/harv_MRCOuta_noFirewood_anim.gif
+
 
 
