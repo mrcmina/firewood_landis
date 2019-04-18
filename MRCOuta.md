@@ -41,7 +41,7 @@ For a more general description of this project, its associated objectives and ex
 [Animated figure here][2] (right-click to save on disk - recommended)
 
 
-![](figures/harv_MRCCentre_firewoodSinglePass_lastPrescr.png)
+![](figures/harv_MRCOuta_firewoodSinglePass_lastPrescr.png)
   
   
 ![](figures/harvRates_MRCOuta_1.png)
