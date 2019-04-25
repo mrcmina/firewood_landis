@@ -5,12 +5,12 @@ output:
   html_document:
     keep_md: yes
     theme: cosmo
-    toc: yes
+    toc: no
   pdf_document:
-    toc: yes
+    toc: no
 ---
 
-Updated on Feb 12 2019
+Updated on Apr 12 2019
 
 
 -------
@@ -25,24 +25,44 @@ This repository contains input files, documentation and simulation outputs (comi
 
 ### Study area
 
-The study areas are located in the Sugar Maple and Yellow birch bioclimatic domain of Southern Quebec (Fig. 1). More specifically each of the simulated areas includes 3 MRCs _(Municipalités régionales de comté)_. The first one is located in Outaouais (Fig. 2), while the second one is located in  Mauricie and Centre-du-Québec (Fig. 3).
+The study areas are located in the Sugar Maple and Yellow birch bioclimatic domain of Southern Quebec. More specifically each of the simulated areas includes three MRCs [_(Municipalités régionales de comté)_][3]. The westernmost one is located in Outaouais, while the other one is located in Mauricie and Centre-du-Québec.
+
+For a more detailed description of each simulation areas, with associated results, click on the links below.
+
+- [MRC 'Centre' (Mékinac, Shawinigan, Portneuf)][1]
+- [MRC 'Outaouais' (Collines, Papineau, Pontiac)][2]
+
+
+[1]: https://github.com/dcyr/firewood_landis/blob/master/MRCCentre.md
+[2]: https://github.com/dcyr/firewood_landis/blob/master/MRCOuta.md
+[3]: https://en.wikipedia.org/wiki/Regional_county_municipality
+
 
 -----------  
 
-#### Figure 1
 
 ![](figures/studyArea.png)
+-----------
+
+
+### Preliminary results
+Disclaimer: These results are preliminary and __will__ change. They are presented here to verify the current implementation of the experiment and the overall dynamics of the simulated systems. Modification of the input parameters are planned and may substantially affect results.
+
+Note that net emissions associated with production and consumption of firewood are currently estimated indirectly, which causes some of the interannual variations. Upcoming simulations, which will include replications of each treatment, will smooth out some of those variations.
   
   
-#### Figure 2
+![](figures/emissions_Firewood.png)
 
-![](figures/initialBiomass_MRCOuta.png)
+  
+   
+![](figures/fluxes_Summary.png)
 
+  
 
-#### Figure 3
+![](figures/pools_Summary.png)
 
-![](figures/initialBiomass_MRCCentre.png)
 
 -----------
+
 
 
